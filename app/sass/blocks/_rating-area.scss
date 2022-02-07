@@ -1,0 +1,46 @@
+.rating-area {
+    overflow: hidden;
+	width: 100px;
+	margin: 8px auto 16px;
+    display: flex;
+    flex-direction: row-reverse;
+    &:not(:checked) {
+        & > input {
+            display: none;
+        }
+        & > label {
+            width: 16px;
+            height: 16px;
+            margin: 0 2px;
+            cursor: pointer;
+            position: relative;
+            &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-image: url(../img/star.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &:hover::before,
+            &:hover ~ label::before {
+                background-image: url(../img/star-gold.svg);
+            }
+        }
+    }
+    & > input:checked ~ label::before {
+        background-image: url(../img/star-gold.svg);
+    }
+    & > input:checked + label:hover::before,
+    & > input:checked + label:hover ~ label::before,
+    & > input:checked ~ label:hover::before,
+    & > input:checked ~ label:hover ~ label::before,
+    & > label:hover ~ input:checked ~ label::before {
+        background-image: url(../img/star-gold.svg);
+    }
+    & input.active,
+    & input.active ~ label::before {
+        background-image: url(../img/star-gold.svg);
+    }
+}

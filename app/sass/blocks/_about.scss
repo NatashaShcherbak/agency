@@ -1,0 +1,74 @@
+.about {
+    padding-top: 120px;
+    padding-bottom: 165px;
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+    &__image {
+        width: 50%;
+        padding-right: 3.4%;
+        position: relative;
+        & img {
+            max-width: 100%;
+        }
+        &_small {
+            position: absolute;
+            bottom: -8%;
+            right: 5%;
+        }
+    }
+    &__article {
+        width: 50%;
+        padding-left: 3.4%;
+        &-link {
+            font-size: 20px;
+            line-height: 27px;
+            color: $text;
+        }
+        &-title {
+            margin: 10px 0 24px;
+        }
+        &-text {
+            font-size: 20px;
+            line-height: 27px;
+            color: $grey;
+            margin-bottom: 40px;
+        }
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+    &__card {
+        width: 48.5%;
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: $text-black;
+            position: relative;
+            padding: 80px 0 16px;
+            &::before {
+                content: "";
+                width: 56px;
+                height: 56px;
+                background-image: url(../img/support.svg);
+                position: absolute;
+                top: 0;
+            }
+            &_team-img::before {
+                background-image: url(../img/team.svg);
+            }
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 17px;
+            color: $grey;
+            margin-top: auto;
+        }
+    }
+}

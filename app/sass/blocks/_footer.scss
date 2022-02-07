@@ -1,0 +1,86 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 73px;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info {
+        width: 28.2%;
+        display: flex;
+        flex-direction: column;
+        &-text {
+            padding-bottom: 24px;
+        }
+    }
+    &__link {
+        align-self: flex-start;
+        margin-bottom: 20px;
+        & img {
+            display: block;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 27px;
+        color: $grey;
+    }
+    &__social {
+        display: flex;
+        margin-top: auto;
+        &-link {
+            margin-right: 16px;
+            & svg {
+                display: block;
+            }
+        }
+    }
+    &__menu {
+        &-title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: $text-black;
+            margin-bottom: 23px;
+        }
+        &-item {
+            list-style: none;
+            padding: 0;
+            & li {
+                padding: 3px 0;
+            }
+        }
+        & .footer__menu-link {
+            padding: 3px 0 3px 24px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background: url(../img/tel.svg) no-repeat center;
+                position: absolute;
+                left: 0;
+                top: 8px;
+            }
+            &_mail {
+                &::before {
+                    background: url(../img/mail.png) no-repeat center;
+                }
+            }
+            &_google {
+                &::before {
+                    background: url(../img/playstore.svg) no-repeat center;
+                }
+            }
+        }
+    }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .footer {
+        &__menu-link_mail {
+            &::before {
+                background: url(../img/mail@2x.png) no-repeat center;
+            }
+        }
+    }
+}

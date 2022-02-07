@@ -1,0 +1,52 @@
+.review {
+    background-color: $bg-beige;
+    padding-top: 96px;
+    padding-bottom: 94px;
+    &__wrap {
+        text-align: center;
+    }
+    &__title {
+        font-family: "Noto Sans", "Arial", sans-serif;
+        line-height: 65px;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 27px;
+        color: $grey;
+        margin: 16px 0 60px;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__card {
+        width: 33.333%;
+        padding: 79px 15px 0;
+        &-item {
+            background-color: $white;
+            position: relative;
+            padding: 81px 38px 31px;
+        }
+        &-img {
+            position: absolute;
+            top: -79px;
+            left: 50%;
+            transform: translateX(-50%);
+            & img {
+                border-radius: 50%;
+            }
+        }
+        &-user {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: $text-black;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 20px;
+            color: $grey;
+        }
+    }
+}

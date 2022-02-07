@@ -1,0 +1,33 @@
+.header {
+    padding-top: 46px;
+    padding-bottom: 44px;
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        & img {
+            display: block;
+        }
+    }
+    &__menu {
+        padding: 10px 0;
+        margin-left: auto;
+        &-link {
+            font-size: 18px;
+            line-height: 21px;
+            color: $text;
+            text-transform: capitalize;
+            margin: 0 20px;
+        }
+    }
+    &__user {
+        margin-left: 120px;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+        background: $blue;
+        border-radius: 6px;
+        padding: 11px 26px;
+    }
+}
