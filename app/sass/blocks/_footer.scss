@@ -4,6 +4,7 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
+        gap: 24px;
     }
     &__info {
         width: 28.2%;
@@ -11,6 +12,9 @@
         flex-direction: column;
         &-text {
             padding-bottom: 24px;
+            font-size: 18px;
+            line-height: 27px;
+            color: $grey;
         }
     }
     &__link {
@@ -24,6 +28,10 @@
         font-size: 18px;
         line-height: 27px;
         color: $grey;
+        &:hover {
+            color: $blue;
+            transition-duration: 0.3s;
+        }
     }
     &__social {
         display: flex;
@@ -32,6 +40,10 @@
             margin-right: 16px;
             & svg {
                 display: block;
+            }
+            &:hover path {
+                fill: $green-accent;
+                transition-duration: 0.6s;
             }
         }
     }
